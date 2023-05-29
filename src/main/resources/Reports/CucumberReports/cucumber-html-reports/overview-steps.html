@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>SalesIntel Orchestration Site Automation</td>
+      <td>29 May 2023, 14:58</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">Before_And_After_Execution.afterExecutedClass(Scenario)</td>
+              <td>11</td>
+              <td class="duration" data-value="581263">0.000</td>
+              <td class="duration" data-value="581263">0.001</td>
+              <td class="duration" data-value="6393900">0.006</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Before_And_After_Execution.beforeExecutedClass(Scenario)</td>
+              <td>11</td>
+              <td class="duration" data-value="889490">0.000</td>
+              <td class="duration" data-value="889490">0.003</td>
+              <td class="duration" data-value="9784400">0.009</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Steps.choose_The_Searched_Contact_Dropdown_Option()</td>
+              <td>2</td>
+              <td class="duration" data-value="4203654200">4.203</td>
+              <td class="duration" data-value="4203654200">4.222</td>
+              <td class="duration" data-value="8407308400">8.407</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Steps.click_On_Actvity_Label()</td>
+              <td>2</td>
+              <td class="duration" data-value="2100019050">2.100</td>
+              <td class="duration" data-value="2100019050">2.104</td>
+              <td class="duration" data-value="4200038100">4.200</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Steps.click_On_Close_Button_In_Process_Status_Information()</td>
+              <td>2</td>
+              <td class="duration" data-value="2086557600">2.086</td>
+              <td class="duration" data-value="2086557600">2.094</td>
+              <td class="duration" data-value="4173115200">4.173</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Steps.click_On_Create_New_Job()</td>
+              <td>1</td>
+              <td class="duration" data-value="5127111400">5.127</td>
+              <td class="duration" data-value="5127111400">5.127</td>
+              <td class="duration" data-value="5127111400">5.127</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Steps.click_On_Get_Activity_Status()</td>
+              <td>2</td>
+              <td class="duration" data-value="2129023100">2.129</td>
+              <td class="duration" data-value="2129023100">2.142</td>
+              <td class="duration" data-value="4258046200">4.258</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Steps.click_On_Job_Label()</td>
+              <td>1</td>
+              <td class="duration" data-value="1276929700">1.276</td>
+              <td class="duration" data-value="1276929700">1.276</td>
+              <td class="duration" data-value="1276929700">1.276</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Steps.click_On_Latest_Uploaded_CSV_File()</td>
+              <td>1</td>
+              <td class="duration" data-value="314393456200">5:14.393</td>
+              <td class="duration" data-value="314393456200">5:14.393</td>
+              <td class="duration" data-value="314393456200">5:14.393</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Steps.click_On_Logout_Button()</td>
+              <td>2</td>
+              <td class="duration" data-value="1313499250">1.313</td>
+              <td class="duration" data-value="1313499250">2.137</td>
+              <td class="duration" data-value="2626998500">2.626</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Steps.click_On_Process_Status_Information_Icon()</td>
+              <td>2</td>
+              <td class="duration" data-value="2128084050">2.128</td>
+              <td class="duration" data-value="2128084050">2.157</td>
+              <td class="duration" data-value="4256168100">4.256</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Steps.click_On_Remember_Me_Check_Box()</td>
+              <td>2</td>
+              <td class="duration" data-value="52013950">0.052</td>
+              <td class="duration" data-value="52013950">0.060</td>
+              <td class="duration" data-value="104027900">0.104</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Steps.click_On_Reverify_Contact_Button()</td>
+              <td>1</td>
+              <td class="duration" data-value="104733200">0.104</td>
+              <td class="duration" data-value="104733200">0.104</td>
+              <td class="duration" data-value="104733200">0.104</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Steps.click_On_Reverify_Contact_RV()</td>
+              <td>2</td>
+              <td class="duration" data-value="2063526150">2.063</td>
+              <td class="duration" data-value="2063526150">2.067</td>
+              <td class="duration" data-value="4127052300">4.127</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Steps.click_On_Search_Button_In_Search_Actvity()</td>
+              <td>2</td>
+              <td class="duration" data-value="2116590550">2.116</td>
+              <td class="duration" data-value="2116590550">2.153</td>
+              <td class="duration" data-value="4233181100">4.233</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Steps.click_On_Search_Label()</td>
+              <td>2</td>
+              <td class="duration" data-value="5154022650">5.154</td>
+              <td class="duration" data-value="5154022650">5.196</td>
+              <td class="duration" data-value="10308045300">10.308</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Steps.click_On_Submit_Button()</td>
+              <td>2</td>
+              <td class="duration" data-value="49691300">0.049</td>
+              <td class="duration" data-value="49691300">0.053</td>
+              <td class="duration" data-value="99382600">0.099</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Steps.click_On_Submit_Button_In_Reverify_Contact_Job_Page()</td>
+              <td>1</td>
+              <td class="duration" data-value="5054675300">5.054</td>
+              <td class="duration" data-value="5054675300">5.054</td>
+              <td class="duration" data-value="5054675300">5.054</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Steps.click_On_Task_Label()</td>
+              <td>1</td>
+              <td class="duration" data-value="2075159100">2.075</td>
+              <td class="duration" data-value="2075159100">2.075</td>
+              <td class="duration" data-value="2075159100">2.075</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Steps.enter_Job_Name_In_Reverify_Contact_Job_Page()</td>
+              <td>1</td>
+              <td class="duration" data-value="2118330700">2.118</td>
+              <td class="duration" data-value="2118330700">2.118</td>
+              <td class="duration" data-value="2118330700">2.118</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Steps.enter_The_Comments_In_Reverify_Contact_Job_Page()</td>
+              <td>1</td>
+              <td class="duration" data-value="2119406100">2.119</td>
+              <td class="duration" data-value="2119406100">2.119</td>
+              <td class="duration" data-value="2119406100">2.119</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Steps.enter_The_Password()</td>
+              <td>2</td>
+              <td class="duration" data-value="65928700">0.065</td>
+              <td class="duration" data-value="65928700">0.072</td>
+              <td class="duration" data-value="131857400">0.131</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Steps.enter_The_Search_Contact_Deatils_From_CSV_File()</td>
+              <td>2</td>
+              <td class="duration" data-value="2145962600">2.145</td>
+              <td class="duration" data-value="2145962600">2.172</td>
+              <td class="duration" data-value="4291925200">4.291</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Steps.enter_The_User_Name()</td>
+              <td>2</td>
+              <td class="duration" data-value="103932200">0.103</td>
+              <td class="duration" data-value="103932200">0.125</td>
+              <td class="duration" data-value="207864400">0.207</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Steps.launch_the_url()</td>
+              <td>2</td>
+              <td class="duration" data-value="6335721800">6.335</td>
+              <td class="duration" data-value="6335721800">8.387</td>
+              <td class="duration" data-value="12671443600">12.671</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Steps.upload_The_CSV_File_In_Reverify_Contact_Job_Page()</td>
+              <td>1</td>
+              <td class="duration" data-value="9184258900">9.184</td>
+              <td class="duration" data-value="9184258900">9.184</td>
+              <td class="duration" data-value="9184258900">9.184</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Steps.validate_Process_Status_Information()</td>
+              <td>2</td>
+              <td class="duration" data-value="2034741500">2.034</td>
+              <td class="duration" data-value="2034741500">2.039</td>
+              <td class="duration" data-value="4069483000">4.069</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Steps.validate_The_Toast_Message()</td>
+              <td>1</td>
+              <td class="duration" data-value="8584111600">8.584</td>
+              <td class="duration" data-value="8584111600">8.584</td>
+              <td class="duration" data-value="8584111600">8.584</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Steps.validate_The_Toast_Message_After_The_CSV_File_Upload()</td>
+              <td>1</td>
+              <td class="duration" data-value="20049439600">20.049</td>
+              <td class="duration" data-value="20049439600">20.049</td>
+              <td class="duration" data-value="20049439600">20.049</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>29</td>
+            <td>65</td>
+            <td class="duration">6.742</td>
+            <td class="duration">5:14.393</td>
+            <td class="duration">7:18.269</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

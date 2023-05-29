@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="11" time="438.395481">
+    <testcase classname="Validate Application SalesIntel Orchestration Login Page" name="To Validate SalesIntel Orchestration Login Functionality" time="8.771419">
+        <system-out><![CDATA[Given Launch The URL........................................................passed
+When Enter The User Name....................................................passed
+And Enter The Password......................................................passed
+And Click On Remember Me Check Box..........................................passed
+And Click On Submit Button..................................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Validate Application SalesIntel Orchestration Login Page" name="To Validate SalesIntel Orchestration Logout Functionality" time="2.142143">
+        <system-out><![CDATA[And Click On Logout Button..................................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Validate Application SalesIntel Orchestration Upload And Verify The Details" name="To Validate SalesIntel Orchestration Login Functionality" time="4.527104">
+        <system-out><![CDATA[Given Launch The URL........................................................passed
+When Enter The User Name....................................................passed
+And Enter The Password......................................................passed
+And Click On Remember Me Check Box..........................................passed
+And Click On Submit Button..................................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Validate Application SalesIntel Orchestration Upload And Verify The Details" name="To Validate SalesIntel Orchestration Upload CSV File Functionality" time="24.995059">
+        <system-out><![CDATA[When Click On Job Label.....................................................passed
+And Click On Reverify Contact Button........................................passed
+And Click On Create New Job.................................................passed
+And Enter Job Name In Reverify Contact Job Page.............................passed
+And Enter The Comments In Reverify Contact Job Page.........................passed
+And Upload The CSV File In Reverify Contact Job Page........................passed
+And Click On Submit Button In Reverify Contact Job Page.....................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Validate Application SalesIntel Orchestration Upload And Verify The Details" name="To Validate SalesIntel Orchestration Uploaded CSV File Functionality After Submitting" time="20.056781">
+        <system-out><![CDATA[Then Validate The Toast Message After The CSV File Upload...................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Validate Application SalesIntel Orchestration Upload And Verify The Details" name="To Validate SalesIntel Orchestration Search Activity Functionality" time="19.900637">
+        <system-out><![CDATA[When Click On Search Label..................................................passed
+And Click On Reverify Contact(RV)...........................................passed
+And Click On Actvity Label..................................................passed
+And Enter The Search Contact Deatils From CSV File..........................passed
+And Click On Search Button In Search Actvity................................passed
+And Choose The Searched Contact Dropdown Option.............................passed
+And Click On Get Activity Status............................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Validate Application SalesIntel Orchestration Upload And Verify The Details" name="To Validate SalesIntel Orchestration Process Status Information Functionality" time="6.294703">
+        <system-out><![CDATA[When Click On Process Status Information Icon...............................passed
+Then Validate Process Status Information....................................passed
+When Click On Close Button In Process Status Information....................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Validate Application SalesIntel Orchestration Upload And Verify The Details" name="To Validate SalesIntel Orchestration Search Functionality" time="325.057234">
+        <system-out><![CDATA[When Click On Task Label....................................................passed
+And Click On Latest Uploaded CSV File.......................................passed
+Then Validate The Toast Message.............................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Validate Application SalesIntel Orchestration Upload And Verify The Details" name="To Validate SalesIntel Orchestration Search Activity After Submitting the Tasks Functionality" time="19.944357">
+        <system-out><![CDATA[When Click On Search Label..................................................passed
+And Click On Reverify Contact(RV)...........................................passed
+And Click On Actvity Label..................................................passed
+And Enter The Search Contact Deatils From CSV File..........................passed
+And Click On Search Button In Search Actvity................................passed
+And Choose The Searched Contact Dropdown Option.............................passed
+And Click On Get Activity Status............................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Validate Application SalesIntel Orchestration Upload And Verify The Details" name="To Validate SalesIntel Orchestration Process Status Information After Submitting the Tasks Functionality" time="6.212384">
+        <system-out><![CDATA[When Click On Process Status Information Icon...............................passed
+Then Validate Process Status Information....................................passed
+When Click On Close Button In Process Status Information....................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Validate Application SalesIntel Orchestration Upload And Verify The Details" name="To Validate SalesIntel Orchestration Logout Functionality" time="0.49366">
+        <system-out><![CDATA[And Click On Logout Button..................................................passed
+]]></system-out>
+    </testcase>
+</testsuite>
