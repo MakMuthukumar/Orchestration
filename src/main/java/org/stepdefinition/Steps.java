@@ -10,6 +10,7 @@ import org.json.simple.parser.ParseException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.pagemanager.Page_Object_Manager;
@@ -339,11 +340,11 @@ public class Steps extends Global {
 	@When("Click On Latest Uploaded CSV File")
 	public void click_On_Latest_Uploaded_CSV_File() throws Throwable {
 		System.out.println(job_Name);
-		Thread.sleep(300000);
-		
+		Thread.sleep(600000);
+
 		clickButton(Page_Object_Manager.getInstance().getHome_Page().getRefresh_Button());
 		Thread.sleep(2000);
-		
+
 		WebDriverWait webDriverWait = new WebDriverWait(driver, 120);
 		webDriverWait.until(ExpectedConditions.visibilityOf(driver
 				.findElement(By.xpath("//a[contains(text(),'" + job_Name + "')]//following::td//child::button"))));
@@ -359,8 +360,37 @@ public class Steps extends Global {
 	@Then("Validate The Toast Message")
 	public void validate_The_Toast_Message() throws Throwable {
 		if (driver.findElements(By.xpath("//*[contains(text(),'Task completed successfully')]")).size() != 0) {
-			System.err
-					.println(Page_Object_Manager.getInstance().getHome_Page().getTask_Completed_Successfully_Toast_Message().getText());
+			System.err.println(Page_Object_Manager.getInstance().getHome_Page()
+					.getTask_Completed_Successfully_Toast_Message().getText());
 		}
+	}
+
+	@When("Wait For 5 Minutes")
+	public void wait_For_5_Minutes() {
+		try {
+			Thread.sleep(300000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		log.info("Waited For 5 Minutes");
+	}
+
+	@When("Wait For 15 Minutes")
+	public void wait_For_15_Minutes() throws Throwable {
+
+		Thread.sleep(300000);
+		Actions actions=new Actions(driver);
+		actions.moveToElement(Page_Object_Manager.getInstance().getHome_Page().getJob_Label_Field()).build().perform();
+		
+		Thread.sleep(300000);
+		Actions actions1=new Actions(driver);
+		actions1.moveToElement(Page_Object_Manager.getInstance().getHome_Page().getTasks_Label()).build().perform();
+		
+		Thread.sleep(300000);
+		Actions actions2=new Actions(driver);
+		actions2.moveToElement(Page_Object_Manager.getInstance().getHome_Page().getSearch_Label()).build().perform();
+
+		log.info("Waited For 15 Minutes");
 	}
 }

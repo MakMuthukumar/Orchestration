@@ -45,8 +45,9 @@ Feature: Validate Application SalesIntel Orchestration Upload And Verify The Det
   	Then Validate The Toast Message
   	
   @First @Sanity
-  Scenario: To Validate SalesIntel Orchestration Search Activity After Submitting the Tasks Functionality
- 	 When Click On Search Label
+  Scenario: To Validate SalesIntel Orchestration Search Activity After Submitting the Tasks and 5 minutes of wait Functionality
+   When Wait For 5 Minutes
+ 	 And Click On Search Label
  	 And Click On Reverify Contact(RV)
  	 And Click On Actvity Label
  	 And Enter The Search Contact Deatils From CSV File
@@ -55,7 +56,25 @@ Feature: Validate Application SalesIntel Orchestration Upload And Verify The Det
  	 And Click On Get Activity Status 
  	 
  	@First @Sanity
-  Scenario: To Validate SalesIntel Orchestration Process Status Information After Submitting the Tasks Functionality
+  Scenario: To Validate SalesIntel Orchestration Process Status Information After Submitting the Tasks and 5 minutes of wait Functionality
+  	When Click On Process Status Information Icon
+  	Then Validate Process Status Information
+  	When Click On Close Button In Process Status Information
+  	
+  @First @Sanity
+  Scenario: To Validate SalesIntel Orchestration Search Activity After Submitting the Tasks and 15 minutes of wait Functionality
+   When Click On Task Label
+   And Wait For 15 Minutes
+ 	 And Click On Search Label
+ 	 And Click On Reverify Contact(RV)
+ 	 And Click On Actvity Label
+ 	 And Enter The Search Contact Deatils From CSV File
+ 	 And Click On Search Button In Search Actvity
+ 	 And Choose The Searched Contact Dropdown Option
+ 	 And Click On Get Activity Status 
+ 	 
+ 	@First @Sanity
+  Scenario: To Validate SalesIntel Orchestration Process Status Information After Submitting the Tasks and 15 minutes of wait Functionality
   	When Click On Process Status Information Icon
   	Then Validate Process Status Information
   	When Click On Close Button In Process Status Information

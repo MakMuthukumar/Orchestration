@@ -483,7 +483,7 @@ formatter.after({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "To Validate SalesIntel Orchestration Search Activity After Submitting the Tasks Functionality",
+  "name": "To Validate SalesIntel Orchestration Search Activity After Submitting the Tasks and 5 minutes of wait Functionality",
   "description": "",
   "keyword": "Scenario",
   "tags": [
@@ -499,8 +499,18 @@ formatter.before({
   "status": "passed"
 });
 formatter.step({
-  "name": "Click On Search Label",
+  "name": "Wait For 5 Minutes",
   "keyword": "When "
+});
+formatter.match({
+  "location": "Steps.wait_For_5_Minutes()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Click On Search Label",
+  "keyword": "And "
 });
 formatter.match({
   "location": "Steps.click_On_Search_Label()"
@@ -572,7 +582,165 @@ formatter.after({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "To Validate SalesIntel Orchestration Process Status Information After Submitting the Tasks Functionality",
+  "name": "To Validate SalesIntel Orchestration Process Status Information After Submitting the Tasks and 5 minutes of wait Functionality",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@First"
+    },
+    {
+      "name": "@Sanity"
+    }
+  ]
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Click On Process Status Information Icon",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "Steps.click_On_Process_Status_Information_Icon()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Validate Process Status Information",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Steps.validate_Process_Status_Information()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Click On Close Button In Process Status Information",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "Steps.click_On_Close_Button_In_Process_Status_Information()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "To Validate SalesIntel Orchestration Search Activity After Submitting the Tasks and 15 minutes of wait Functionality",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@First"
+    },
+    {
+      "name": "@Sanity"
+    }
+  ]
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Click On Task Label",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "Steps.click_On_Task_Label()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Wait For 15 Minutes",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "Steps.wait_For_15_Minutes()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Click On Search Label",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "Steps.click_On_Search_Label()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Click On Reverify Contact(RV)",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "Steps.click_On_Reverify_Contact_RV()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Click On Actvity Label",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "Steps.click_On_Actvity_Label()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Enter The Search Contact Deatils From CSV File",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "Steps.enter_The_Search_Contact_Deatils_From_CSV_File()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Click On Search Button In Search Actvity",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "Steps.click_On_Search_Button_In_Search_Actvity()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Choose The Searched Contact Dropdown Option",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "Steps.choose_The_Searched_Contact_Dropdown_Option()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Click On Get Activity Status",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "Steps.click_On_Get_Activity_Status()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "To Validate SalesIntel Orchestration Process Status Information After Submitting the Tasks and 15 minutes of wait Functionality",
   "description": "",
   "keyword": "Scenario",
   "tags": [
