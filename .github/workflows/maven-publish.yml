@@ -31,7 +31,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with: 
               name: Cucumber Report Latest Results
-              path: src/test/resources/Reports/CucumberReports/cucumber-html-reports/
+              path: src/main/resources/Reports/CucumberReports/cucumber-html-reports/
           
       - name: Execution Results Download Artifact For Cucumber Reporting
         if: always()
@@ -73,9 +73,9 @@ jobs:
           secure: true
           username: ${{secrets.MAIL_USERNAME}}
           password: ${{secrets.MAIL_PASSWORD}}
-          subject: Sales Intel CI/CD Automation Result
-          to:  muthu.kumar@astegic.com
-          from: muthumak@gmail.com
+          subject: Sales Intel Orchestration CI/CD Automation Result
+          to:  pssraja94@gmail.com
+          from: pssraja94@gmail.com
           html_body: |
                   <html>
                   <body>
