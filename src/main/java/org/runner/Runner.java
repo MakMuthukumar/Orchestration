@@ -13,8 +13,8 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(features = "src\\main\\resources\\Features\\", glue = { "org.stepdefinition",
 		"org.runner" }, dryRun = false, monochrome = true, tags = { "@First,@Sanity" }, plugin = {
-				"io.qameta.allure.cucumber4jvm.AllureCucumber4Jvm",
-				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:", "pretty",
+				"io.qameta.allure.cucumber3jvm.AllureCucumber4Jvm",
+				"com.aventstack.extentreports.cucumber.ExtentCucumberAdapter:", "pretty",
 				"html:src\\main\\resources\\Reports\\HTML", "json:src\\main\\resources\\Reports\\Json\\cucumber.json",
 				"junit:src\\main\\resources\\Reports\\XML\\cucumber.xml" })
 public class Runner extends AbstractTestNGCucumberTests {
